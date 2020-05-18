@@ -131,6 +131,11 @@ const normalize = css`
   summary {
     display: list-item;
   }
+
+  @font-face {
+    font-family: 'Turbinado';
+    src: url('/fonts/Turbinado.otf');
+  }
 `;
 
 export default normalize;
