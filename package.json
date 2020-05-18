@@ -1,0 +1,55 @@
+{
+  "name": "rickandmorty-graphql-app",
+  "version": "1.0.0",
+  "author": "rmyz",
+  "scripts": {
+    "dev": "rimraf ./.next && next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo no test",
+    "test:watch": "npm test -- --watch",
+    "eslint": "./node_modules/.bin/eslint ./src",
+    "stylelint": "./node_modules/.bin/stylelint \"src/**/*.{js,jsx}\"",
+    "format": "npm run prettier -- --write",
+    "prettier": "./node_modules/.bin/prettier \"src/**/*.{js,jsx,css,json}\""
+  },
+  "prettier": "./node_modules/@rmyzdev/react-linter/.prettierrc.js",
+  "eslintConfig": {
+    "extends": "./node_modules/@rmyzdev/react-linter/.eslintrc.js"
+  },
+  "stylelint": {
+    "extends": "./node_modules/@rmyzdev/react-linter/stylelint.config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --max-warnings=0"
+    ],
+    "src/**/*.{js,jsx,css,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "3.1.5",
+    "apollo-boost": "0.4.9",
+    "graphql": "15.0.0",
+    "next": "9.4.1",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "5.1.0"
+  },
+  "devDependencies": {
+    "@rmyzdev/react-linter": "2.0.0",
+    "babel-plugin-styled-components": "1.10.7",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.4",
+    "rimraf": "3.0.2"
+  }
+}
