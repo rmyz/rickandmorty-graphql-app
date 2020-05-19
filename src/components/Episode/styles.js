@@ -27,7 +27,7 @@ export const Card = styled.div`
   justify-content: center;
   width: 50%;
   height: 80%;
-  border: 5px solid #40e0d0;
+  border: 5px solid #ff8c00;
   border-radius: 5px;
   padding: ${rem('16px')};
 `;
