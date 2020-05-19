@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
-import GlobalStyles from '../styles/globalStyles';
-import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
-const client = new ApolloClient({
-  uri: ' https://rickandmortyapi.com/graphql',
-});
+import GlobalStyles from '../styles/globalStyles';
+import { client } from '../services/ApolloClient';
 
 const App = ({ Component, pageProps }) => {
   return (
