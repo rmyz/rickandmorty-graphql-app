@@ -1,7 +1,7 @@
 import { gql } from 'apollo-boost';
 
 export const GET_CHARACTERS = gql`
-  query getCharacters($page: Int! = 1) {
+  query getCharacters($page: Int!) {
     characters(page: $page) {
       info {
         next
