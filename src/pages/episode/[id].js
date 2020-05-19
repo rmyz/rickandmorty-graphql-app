@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { client } from '../../services/ApolloClient';
 import { GET_EPISODE } from '../../queries';
 import Episode from '../../components/Episode';
+import NavBar from '../../components/shared/NavBar';
 
 export async function getServerSideProps(context) {
   const {
@@ -27,6 +28,7 @@ const EpisodeRoute = ({ episode }) => (
       </title>
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     </Head>
+    <NavBar />
     <Episode episode={episode} />
   </>
 );
