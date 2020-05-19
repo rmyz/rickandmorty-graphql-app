@@ -1,14 +1,31 @@
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-const Characters = () => {
+import { client } from '../../services/ApolloClient';
+import { GET_CHARACTERS } from '../../queries';
+import Characters from '../../components/Characters';
+
+export async function getServerSideProps() {
+  const {
+    data: { characters },
+  } = await client.query({ query: GET_CHARACTERS, variables: { page: 1 } });
+
+  return { props: { characters } };
+}
+
+const CharactersRoute = ({ characters }) => {
   return (
     <>
       <Head>
         <title>Characters - Rick and Morty</title>
       </Head>
-      <h1>Characters page</h1>
+      <Characters characters={characters} />
     </>
   );
 };
 
-export default Characters;
+CharactersRoute.propTypes = {
+  characters: PropTypes.object,
+};
+
+export default CharactersRoute;
