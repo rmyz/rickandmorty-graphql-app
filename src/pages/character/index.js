@@ -18,6 +18,7 @@ const CharactersRoute = ({ characters }) => {
     <>
       <Head>
         <title>Characters - Rick and Morty</title>
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       </Head>
       <Characters characters={characters} />
     </>
