@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { client } from '../../services/ApolloClient';
 import { GET_LOCATION } from '../../queries';
 import Location from '../../components/Location';
+import NavBar from '../../components/shared/NavBar';
 
 export async function getServerSideProps(context) {
   const {
@@ -25,6 +26,7 @@ const LocationRoute = ({ location }) => (
       <title>{location.name} - Rick and Morty</title>
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     </Head>
+    <NavBar />
     <Location location={location} />
   </>
 );

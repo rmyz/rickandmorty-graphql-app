@@ -5,7 +5,7 @@ import { Wrapper as Title } from '../shared/Title/styles';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
