@@ -51,7 +51,7 @@ const Locations = ({ locations }) => {
         dataLength={allLocations?.length}
         next={loadMoreData}
         hasMore={nextLink}
-        height="60vh"
+        height="50vh"
         style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}
         loader={<Loader />}
       >
