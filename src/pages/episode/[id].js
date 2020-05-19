@@ -24,8 +24,8 @@ const EpisodeRoute = ({ episode }) => (
     <Head>
       <title>
         {episode.episode} - {episode.name} - Rick and Morty
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       </title>
+      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     </Head>
     <Episode episode={episode} />
   </>
