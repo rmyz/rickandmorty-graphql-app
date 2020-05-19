@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import { Wrapper, Card, Text, CharactersWrapper, Character } from './styles';
-import Title from '../shared/Title';
+import { Wrapper, StyledTitle, Card, Text, CharactersWrapper, Character } from './styles';
 
 const Episode = ({ episode }) => {
   const { id, name, air_date, episode: episodeCode, characters } = episode;
@@ -18,9 +17,9 @@ const Episode = ({ episode }) => {
   return (
     <Wrapper>
       <Card>
-        <Title>
+        <StyledTitle>
           {episodeCode} - {name}
-        </Title>
+        </StyledTitle>
         <Text>
           <b>ID:</b> {id}
         </Text>
