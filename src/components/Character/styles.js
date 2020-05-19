@@ -5,7 +5,7 @@ import { Wrapper as Title } from '../shared/Title/styles';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,6 @@ export const StyledLink = styled(Text)`
 `;
 
 export const Image = styled.img`
-  max-width: 80%;
-  min-width: 30%;
+  width: ${rem('150px')};
   margin: ${rem('8px')};
 `;

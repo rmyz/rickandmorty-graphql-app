@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { client } from '../../services/ApolloClient';
 import { GET_CHARACTER } from '../../queries';
 import Character from '../../components/Character';
+import NavBar from '../../components/shared/NavBar';
 
 export async function getServerSideProps(context) {
   const {
@@ -25,6 +26,7 @@ const CharacterRoute = ({ character }) => (
       <title>{character.name} - Rick and Morty</title>
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     </Head>
+    <NavBar />
     <Character character={character} />
   </>
 );
