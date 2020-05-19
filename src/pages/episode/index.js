@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { client } from '../../services/ApolloClient';
 import { GET_EPISODES } from '../../queries';
 import Episodes from '../../components/Episodes';
+import NavBar from '../../components/shared/NavBar';
 
 export async function getServerSideProps() {
   const {
@@ -19,6 +20,7 @@ const EpisodesRoute = ({ episodes }) => (
       <title>Episodes - Rick and Morty</title>
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     </Head>
+    <NavBar />
     <Episodes episodes={episodes} />
   </>
 );
