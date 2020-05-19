@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Wrapper, CharacterName } from './styles';
 
-const Episode = ({ character }) => {
+const Character = ({ character }) => {
   const randomNumber = useRef(Math.floor(Math.random() * 3 + 1));
   const colors = {
     1: '#ff0080',
@@ -21,8 +21,8 @@ const Episode = ({ character }) => {
   );
 };
 
-Episode.propTypes = {
+Character.propTypes = {
   character: PropTypes.object,
 };
 
-export default Episode;
+export default Character;
